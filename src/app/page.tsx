@@ -1,19 +1,18 @@
-// "use client";
-import SolanaCard from "@/components/Cards/SolanaCard";
-import BitcoinCard from "@/components/Cards/BitcoinCard";
+import Card from "@/components/Cards/Card";
 import styles from "./page.module.css";
-import { Suspense } from "react";
+
 
 export default async function Home() {
   return (
     <>
       <main className={styles.main}>
-        <Suspense fallback={<h3>Loading...</h3>}>
-          <SolanaCard />
-        </Suspense>
-        <Suspense fallback={<h3>Loading...</h3>}>
-          <BitcoinCard />
-        </Suspense>
+        <Card symbol="solana" currency="eur" />
+        <Card symbol="bitcoin" currency="usd" />
+        <Card symbol="polkadot" currency="usd" />
+        <Card symbol="matic-network" currency="usd" />
+        <Card symbol="near" currency="usd" />
+        <Card symbol="ethereum" currency="usd" />
+        <p>CoinGecko</p>
       </main>
     </>
   );
